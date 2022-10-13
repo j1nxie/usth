@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"esm": "^3.2.25",
+		"glob": "^8.0.3",
+		"mathjax-full": "^3.2.2",
+		"yargs": "^17.6.0"
+	}
+}

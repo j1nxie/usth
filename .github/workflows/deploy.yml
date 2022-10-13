@@ -54,6 +54,15 @@ jobs:
           python -V
           pip list --not-required
           pip list
+      # Set up Node.js and dependencies
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'pnpm'
+      - name: Set up Node.js and dependencies
+        run: |
+          pnpm install --frozen-lockfile
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
       - name: Build Sphinx docs
