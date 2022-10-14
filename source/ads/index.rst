@@ -7,7 +7,7 @@ written using this language.
 
 .. toctree::
    :numbered:
-   :maxdepth: 1
+   :maxdepth: 2
 
    introduction
    elementary-data-structure

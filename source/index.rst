@@ -22,6 +22,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    ads/index
+   nm/index
