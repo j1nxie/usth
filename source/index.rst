@@ -22,7 +22,6 @@ Contents
 --------
 
 .. toctree::
-   :numbered:
-   :maxdepth: 2
+   :maxdepth: 1
 
-   ads/introduction
+   ads/index

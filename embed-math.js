@@ -13,7 +13,25 @@ const { AllPackages } = require('mathjax-full/js/input/tex/AllPackages.js');
 const glob = require('glob');
 const fs = require('fs');
 
+const { JSDOM } = require("jsdom");
+
 require('mathjax-full/js/util/entities/all.js');
+
+/**
+ * Remove the <script> tag that loads MathJax.js from the CDN.
+ * @param {string} html
+ */
+function removeMathJaxScript(html) {
+    const dom = new JSDOM(html);
+    for (const script of dom.window.document.getElementsByTagName('script')) {
+        const src = script.getAttribute('src');
+        if (src && src.includes('tex-svg-full.js')) {
+            script.remove();
+            break;
+        }
+    }
+    return dom.serialize();
+}
 
 const argv = require('yargs')
   .demand(1).strict()
@@ -50,7 +68,7 @@ files.forEach(file => {
   const svg = new SVG({ fontCache: argv.fontCache });
 
   const htmlfile = fs.readFileSync(file, 'utf8');
-  const html = mathjax.document(htmlfile, { InputJax: tex, OutputJax: svg });
+  let html = mathjax.document(htmlfile, { InputJax: tex, OutputJax: svg });
   html.render();
 
   if (Array.from(html.math).length == 0) {
@@ -59,6 +77,7 @@ files.forEach(file => {
     if (cache) adaptor.remove(cache);
   }
 
-  fs.writeFileSync(file, adaptor.doctype(html.document) + adaptor.outerHTML(adaptor.root(html.document)), 'utf8');
+  let document = removeMathJaxScript(adaptor.outerHTML(adaptor.root(html.document)));
 
+  fs.writeFileSync(file, adaptor.doctype(html.document) + document, 'utf8');
 });

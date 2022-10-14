@@ -36,10 +36,12 @@ html_title = 'USTH Study Notes Emporium'
 
 html_last_updated_fmt = '%b %d, %Y'
 
+mathjax_path = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js'
+
 mathjax3_config = {
     'tex': {
         'packages': ['base', 'ams'],
-        },
+    },
     'loader': {
         'load': ['output/svg', '[tex]/ams']
     }

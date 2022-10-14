@@ -14,8 +14,8 @@ perform a task.
 Data structure
 --------------
 
-A data structure is a data organization, management and storage format that
-enables efficient access and computation.
+Data structure is a data organization, management and storage format that is
+usually chosen for efficient access to data.
 
 .. _flowchart:
    
@@ -62,35 +62,19 @@ Properties
 
 Good algorithms must possess these following properties.
 
-.. _finiteness:
-
-Finiteness
-##########
-
+**Finiteness**
 Finiteness of an algorithm means it must always terminate after a *finite*
 number of steps. The *stopping conditions* of the algorithm should be assessed.
 
-.. _definiteness:
-
-Definiteness
-############
-
+**Definiteness**
 Each instruction of an algorithm should be defined precisely and concisely.
 *Repetition* should be avoided at all costs.
 
-.. _input/output:
+**Input/Output**
+An algorithms may *not* have inputs, but it will have *one or more*
+outputs available when the algorithm terminates.
 
-Input/Output
-############
-
-An algorithms may *not* have **inputs**, but it will have *one or more*
-**outputs** available when the algorithm terminates.
-
-.. _effectiveness:
-
-Effectiveness
-#############
-
+**Effectiveness**
 All operations in an algorithm must be *sufficiently basic* that they can be
 done exactly as given and in *finite* time.
 
@@ -101,19 +85,11 @@ Evaluation criterias
 
 There are a few criterias often used to evaluate an algorithm.
 
-.. _correctness:
+**Correctness**
+An algorithm should always produce consistent, expected results for each given
+input.
 
-Correctness
-###########
-
-Correctness evaluates whether an algorithm always produces the expected results
-for each given input.
-
-.. _complexity:
-
-Efficiency/Complexity
-#####################
-
+**Efficiency/Complexity**
 An algorithm should be optimized to have the lowest running time possible, also
 known as having the lowest *time complexity*. During implementation of the
 algorithm, as variables are declared and located in memory, an algorithm should
@@ -192,3 +168,88 @@ An example of dynamic programming would be this implementation in finding the
 
       return fibo(n - 1) + fibo(n + 2);
    }
+
+.. _greedy:
+
+Greedy
+######
+
+A greedy algorithm takes the best possible right now, without regard for later
+consequences. It will then choose a local optimum at each step to find a global
+optimum.
+
+Greedy algorithms work well sometimes for optimization problems.
+
+.. _backtracking:
+
+Backtracking
+############
+
+A backtracking algorithm bases on recursion (see :ref:`recursive`). It first
+starts with one possible move out of many, then proceeds to find the next move
+from that starting point. If this satisfies the given constraints, it will
+continue; else it will return to the previous move.
+
+Sometimes, backtracking problems will not have solutions due to the given
+constraints.
+
+.. _randomized:
+
+Randomized
+##########
+
+A randomized algorithm employs a degree of randomness as part of its logic.
+For example, using a random number as a pivot in `quicksort`.
+
+.. _algorithm complexity:
+
+Algorithm complexity
+~~~~~~~~~~~~~~~~~~~~
+
+Complexity of an algorithm is a theoretical evaluation on how good it is in
+terms of *running time* and *computational memory*.
+
+There are three main *asymptomtic notations* when it comes to complexity, and those are: Big
+:math:`\Theta`, Big :math:`O` and Big :math:`\Omega`. These notations represent
+the mathematical limits of an algorithm.
+
+**Big Theta** represents the exact performance value of an algorithm, or a
+useful range between its upper bound and lower bound.
+
+**Big O** represents the *upper bound* of a given algorithm, or the longest an
+algorithm could take for any given data set.
+
+**Big Omega** is the opposite of Big O, as it represents the *lower bound* of a
+given algorithm, or when the algorithm reaches top speed.
+
+Assume that the running time of an algorithm is :math:`T(n)` with :math:`n`
+objects, we have the following:
+
+- Big :math:`\Theta`: :math:`T(n) = \Theta(f(n))` if :math:`\exists k_1, k_2,
+  n_0 \in \mathbb{N}^+, \forall n \geq n_0: k_1 f(n) \leq T(n) \leq k_2 f(n)`
+
+- Big :math:`O`: :math:`T(n) = O(f(n))` if :math:`\exists k, n_0 \in
+  \mathbb{N}^+, \forall n \geq n_0: T(n) \leq kf(n)`
+
+- Big :math:`\Omega`: :math:`T(n) = \Omega(f(n))` if :math:`\exists k, n_0 \in
+  \mathbb{N}^+, \forall n \geq n_0: T(n) \geq kf(n)`
+
+Any operation, statement, instruction, etc. will have a complexity of
+:math:`O(1)`. Loops will have a complexity of :math:`O(n^k)`, with :math:`k`
+being the number of nested loops.
+
+There are also several properties for complexity computation, given below:
+
+.. math::
+   \begin{aligned}
+    & f(n) = O(h(n)) \rightarrow n \times f(n) = O(n \times h(n)) \\
+    & f(n) = O(h(n)) \rightarrow k \times f(n) = O(h(n)) \ \text{where} \ k \
+    \text{is a constant} \\
+    & f(n) = O(h(n)) \rightarrow g(n) = O(y(n)) \rightarrow f(n) \times g(n) =
+    O(h(n) \times y(n)) \\
+    & f(n) + g(n) = \text{max}(O(f(n)), O(y(n)))
+   \end{aligned}
+
+A table of common time complexities and examples where they can be found is
+available `here <https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities>`__.
+
