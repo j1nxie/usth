@@ -7,6 +7,7 @@ An ongoing effort to re-organize and simplify lectures taught at USTH.
 Subject | Maintainer(s)
 ------- | -------------
 Algorithm and Data Structure | [j1nxie](https://github.com/j1nxie)
+Numerical Methods            | [j1nxie](https://github.com/j1nxie), [menhhduc](https://github.com/ducictusth), [Peachy](https://github.com/Peachy72)
 
 ## Contributing
 
