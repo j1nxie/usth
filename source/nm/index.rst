@@ -9,4 +9,5 @@ MATLAB/GNU Octave is also taught and extensively used during the course.
    :maxdepth: 2
 
    introduction
+   system-linear
    roots
