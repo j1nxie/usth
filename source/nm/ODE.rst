@@ -1,80 +1,102 @@
 ODE
-====
+===
+
+.. _ode overview:
 
 Overview
 --------
-* The fundamental laws of physics, mechanics, electricity, and thermoddynamics are usually based on empirical observations that explain variations in physical properties and states of systems. Rather than describing the state of physical systems directly, the laws are usually couched in terms of spatial and temporal changes
-* Such equations, which are composed of an unknown function and its derivatives, are called differential equations.
 
-* formula
-dv/dt = g - (c/m) v
-where 
-g is the gravitational constant
-m is the mass
-c is a drag coefficient
-v is the dependent variable
-t is the independent variable
+The fundamental laws of physics, mechanics, electricity, and thermoddynamics
+are usually based on empirical observations that explain variations in physical
+properties and states of systems. Rather than describing the state of physical
+systems directly, the laws are usually couched in terms of spatial and
+temporal changes. Such equations, which are composed of an unknown function and
+its derivatives, are called differential equations.
 
-------------------------------------------------------------------------
+The formula for an ODE is given below, where :math:`g` is the gravitational
+constant, :math:`m` is the mass, :math:`c` is a drag coefficient, :math:`v` is
+the dependent variable, and :math:`t` is the independent variable.
 
-* when the function involves one independent variable, the equation is called an oridnary differential equation (ODE)
-* this constrast to a partial differential equation (PDE), which involves more than one independent variable
+.. math::
+   \frac{dv}{dt} = g - \frac{c}{m} v
 
-------------------------------------------------------------------------
+When the function involves one independent variable, the equation is called an
+ordinary differential equation (ODE). This constrasts to a partial differential
+equation (PDE), which involves more than one independent variable.
 
-* This part is devoted to solving ordinary differential equations of the form
-dy/dx = f(x,y)
-where x is the independent variable and y is the dependent variable
+.. _ode solving:
 
-the method was of the general form
+Solving ODEs
+------------
 
-new value = old value + slope x step size
-or in mathematical terms
-y_n+1 = y_n + (theta) h
-where the slope (theta) is called an increment function
+This part is devoted to solving ordinary differential equations of the form
+:math:`\frac{dy}{dx} = f(x,y)`, where :math:`x` is the independent variable and
+:math:`y` is the dependent variable.
 
-------------------------------------------------------------------------
-ANYWAY, long story short, here's a summary i'll make the full version later :)
+The method was of the general form:
 
-* Euler's method uses the simple formula
-y(x+h) = y(x) + h f(x,y)
+.. math::
 
-to construct the tangent at the point x and obtain the value of y(x+h), whose slope is f(x,y) or dy/dx
+   \text{new value} = \text{old value} + \text{slope} \times \text{step size}
 
-In Euler’s method, you can approximate the curve of the solution by the tangent in each interval (that is, by a sequence of short line segments), at steps of h.
+or in mathematical terms:
 
-In general, if you use small step size, the accuracy of approximation increases.
+.. math::
 
-GENERAL FORMULA
----------------
-y_i+1 = y_i + h f(x_i, y_i)
+   y_{n+1} = y_n + \theta h
 
-where
-y_i+1: the next estimated solution value
-y_i: the current value
-h: the interval between steps
-f(x_i, y_i): value of the derivative at the current (x_i,y_i) point
+where the slope :math:`\theta` is called an increment function.
 
-------------------------------------------------------------------------
-FUNCTIONAL VALUE AT ANY POINT B GIVIN BY y(b)
-------------------------------------------------------------------------
-n = (b-x_0)/h
+Euler's method uses the simple formula:
 
-where
-n: number of steps
-h: interval width (size of each steps)
+.. math::
 
-------------------------------------------------------------------------
+   y(x+h) = y(x) + h f(x,y)
+
+to construct the tangent at the point :math:`x` and obtain the value of
+:math:`y(x+h)`, whose slope is :math:`f(x,y)` or :math:`\frac{dy}{dx}`.
+
+In Euler’s method, you can approximate the curve of the solution by the tangent
+in each interval (that is, by a sequence of short line segments), at steps of
+:math:`h`.
+
+In general, if you use small step size, the accuracy of approximation
+increases.
+
+.. _ode formula:
+
+General formula
+~~~~~~~~~~~~~~~
+
+.. math::
+
+   y_{i+1} = y_i + h f(x_i, y_i)
+
+- :math:`y_{i+1}`: the next estimated solution value
+- :math:`y_i`: the current value
+- :math:`h`: the interval between steps
+- :math:`f(x_i, y_i)`: value of the derivative at the current :math:`(x_i,y_i)`
+  point
+
+.. _ode functional value:
+
+Functional value at any point B given by y(b)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. math::
+   n = \frac{b-x_0}{h}
+
+- :math:`n`: number of steps
+- :math:`h`: interval width (size of each steps)
 
 OMG Pseudocode
---------------
-1. define f(x,y)
-2. input x_0, y_0
-3. input h, n
-4. for j from 0 to (n-1) do
-* y_i+1 = y_i + h f(x_i, y_i)
-* x_i+1 = x_i + h
-* print x_i+1, y_i+1
+~~~~~~~~~~~~~~
+
+1. define :math:`f(x,y)`
+2. input :math:`x_0`, :math:`y_0`
+3. input :math:`h`, :math:`n`
+4. for :math:`j` from :math:`0` to :math:`(n-1)` do
+    - :math:`y_{i+1} = y_i + h f(x_i, y_i)`
+    - :math:`x_{i+1} = x_i + h`
+    - print :math:`x_{i+1}`, :math:`y_{i+1}`
 5. end 
-
-
