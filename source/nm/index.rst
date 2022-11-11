@@ -12,4 +12,5 @@ MATLAB/GNU Octave is also taught and extensively used during the course.
    system-linear
    roots
    lu-decomposition
+   differentiation
    ode
