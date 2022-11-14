@@ -26,3 +26,4 @@ Contents
 
    ads/index
    nm/index
+   ps/index
