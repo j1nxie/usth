@@ -15,6 +15,8 @@ author = 'j1nxie'
 
 extensions = [
     'sphinx.ext.mathjax',
+    'sphinx.ext.graphviz',
+    'matplotlib.sphinxext.plot_directive',
 ]
 
 templates_path = ['_templates']
@@ -52,3 +54,5 @@ numfig = True
 numfig_format = {
     'figure': 'Fig. %s',
 }
+
+graphviz_output_format = "svg"
