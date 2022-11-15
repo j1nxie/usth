@@ -6,3 +6,4 @@ Probability and Statistics
    :maxdepth: 2
 
    basic-probability
+   discrete-random-variables
