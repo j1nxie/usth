@@ -14,7 +14,8 @@ something out of.
 Contact
 -------
 
-This documentation is currently an one-man project. `Contact me`_.
+This documentation is currently a collaboration between me and a few friends.
+`Contact me`_ if you want to help.
 
 .. _Contact me: https://linktr.ee/ryliexd
 
