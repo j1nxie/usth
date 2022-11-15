@@ -106,8 +106,8 @@ Kolmogorov's Axioms:
 
 1. Non-negativity: :math:`P(A) \geq 0`
 2. Normalization: :math:`P(\Omega) = 1`
-3. Additivity: If :math:`A \cup B = \emptyset`, then `P(A \cup B) = P(A) +
-   P(B)`.
+3. Additivity: If :math:`A \cup B = \emptyset`, then :math:`P(A \cup B) = P(A)
+   + P(B)`.
 
 Due to the above axioms, we have the following consequences:
 
