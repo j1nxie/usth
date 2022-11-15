@@ -8,6 +8,7 @@ Subject | Maintainer(s)
 ------- | -------------
 Algorithm and Data Structure | [j1nxie](https://github.com/j1nxie)
 Numerical Methods            | [j1nxie](https://github.com/j1nxie), [menhhduc](https://github.com/ducictusth), [Peachy](https://github.com/Peachy72)
+Probability and Statistics   | [j1nxie](https://github.com/j1nxie)
 
 ## Contributing
 
