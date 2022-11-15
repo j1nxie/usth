@@ -198,3 +198,231 @@ With the variance, we can also obtain the standard deviation:
 
    - :math:`\text{var}[aX + b] = a^2 \text{var}[X]`
    - :math:`\text{var}[X] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2`
+
+.. _conditional pmf event:
+
+Conditional PMF on an Event
+---------------------------
+
+.. _conditional pmf event definition:
+
+Definition
+~~~~~~~~~~
+
+The *conditional PMF* of :math:`X`, given an event :math:`A` with :math:`P(A) >
+0` is defined by:
+
+.. math::
+
+   p_{X|A}(x) = P(X = x | a) = \frac{P(\{X = x\} \cup A)}{P(A)}
+
+.. note::
+
+   Sanity check: verify that:
+
+   .. math::
+
+      \sum_x p_{X|A}(x) = 1
+
+.. figure:: ../_static/conditional-pmf-event.png
+   :width: 300
+   :align: center
+
+   An example of conditional PMF on an event
+
+.. _conditional pmf expectations:
+
+Conditional Expectations on an Event
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The *conditional expectation* of :math:`X` given an event :math:`A` with
+:math:`P(A) > 0` is defined by:
+
+.. math::
+
+   \mathbb{E}[X|A] = \sum_x x p_{X|A}(x)
+
+.. note::
+
+   This is very similar to the normal expectation of a discrete random variable.
+   (Refer to :ref:`mean`.)
+
+From that, we also have the expected value rule:
+
+.. math::
+
+   \mathbb{E}[g(X)|A] = \sum_x g(x)p_{X|A}(x)
+
+.. _total expectation theorem:
+
+(Refer to :ref:`total probability theorem` first.)
+
+If :math:`A_1, \ldots , A_n` be *disjoint events* that form a partition of the
+sample space, with :math:`P(A_i) > 0` for all :math:`i`, then:
+
+.. math::
+
+   \mathbb{E}[X] = \sum_{i=1}^n P(A_i) \mathbb{E}[X | A_i]
+
+.. _multiple drv:
+
+Multiple Random Variables
+-------------------------
+
+.. _joint pmf:
+
+Joint PMF
+~~~~~~~~~
+
+Consider two discrete random variables :math:`X` and :math:`Y`, associated with
+*the same experiment* (very important!). The joint PMF of :math:`X` and
+:math:`Y` is defined by:
+
+.. math::
+
+   \begin{aligned}
+   p_{X, Y}(x,y) & = P(\{X = x\} \cup \{Y = y\}) \\
+   & = P(X = x, Y = y)
+   \end{aligned}
+
+.. _marginal pmf:
+
+Marginal PMF
+~~~~~~~~~~~~
+
+We can calculate the PMFs of :math:`X` and :math:`Y` seperately (referred to as
+the marginal PMF of :math:`X` and :math:`Y`) by using the formulas:
+
+.. math::
+
+   \begin{aligned}
+   & p_X(x) = \sum_y p_{X,Y}(x,y) \\
+   & p_Y(y) = \sum_x p_{X,Y}(x,y)
+   \end{aligned}
+
+.. note::
+
+   Proof of the above formula:
+
+   .. math::
+      
+      \begin{aligned}
+      p_X(x) & = P(X = x) \\
+      & = \sum_y P(X = x, Y = y) \\
+      & = \sum_y p_{X,Y}(x,y)
+      \end{aligned}
+
+The joint PMF and the marginal PMF of a random variable can be displayed in a
+tabular form, as shown below:
+
+.. figure:: ../_static/joint-marginal-pmf-table.png
+   :width: 500
+   :align: center
+
+   Joint PMF and marginal PMF of a random variable in tabular form
+
+.. _drv expected value rule:
+
+Expected Value Rule
+~~~~~~~~~~~~~~~~~~~
+
+A function :math:`g(X,Y)` of :math:`X` and :math:`Y` defines another random
+variable, and:
+
+.. math::
+
+   \mathbb{E}[g(X,Y)] = \sum_x \sum_y g(x,y)p_{X,Y}(x,y)
+
+.. note::
+
+   The above expected value rule has linearity:
+
+   .. math::
+
+      \mathbb{E}[aX_1 + bX_2 + c] = a \mathbb{E}[X_1] + b \mathbb{E}[X_2] + c
+
+.. _conditional pmf random variable:
+
+Conditional PMF on a Random Variable
+------------------------------------
+
+.. _conditional pmf random variable definition:
+
+Definition
+~~~~~~~~~~
+
+The conditional PMF :math:`P(X=x | Y=y)` of :math:`X` given :math:`Y` is defined
+by:
+
+.. math::
+
+   p_{X|Y}(x|y) = \frac{P(\{X=x, Y=y\})}{P(Y=y)} = \frac{p_{X,Y}(x,y)}{p_Y(y)}
+
+.. note::
+
+   Sanity check: verify that:
+
+   .. math::
+
+      \sum_x p_{X|Y}(x|y) = 1
+
+The conditional PMF on a random variable can be displayed in a 3-dimensional
+graph like below:
+
+.. figure:: ../_static/conditional-pmf-rv.png
+   :width: 500
+   :align: center
+
+   A conditional PMF on a random variable displayed in graph form
+
+The conditional PMF of :math:`X` given :math:`Y=y` is related to the joint PMF
+by:
+
+.. math::
+
+   p_{X,Y}(x,y) = p_Y(y)p_{X,Y}(x|y)
+
+.. _conditional expectations random variable:
+
+Conditional Expectations on a Random Variable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The conditional expectation of a random variable :math:`X` given a value
+:math:`y` of :math:`Y` is given by:
+
+.. math::
+
+   \mathbb{E}[X|Y=y] = \sum_x x p_{X|Y}(x|y)
+
+.. _conditional pmf rv total expectation:
+
+Total Expectation Theorem
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Given two random variables :math:`X` and :math:`Y`, the unconditional average
+can be obtained by averaging the conditional averages.
+
+.. math::
+
+   \mathbb{E}[X] = \sum_y p_Y(y) \mathbb{E}[X|Y=y]
+
+.. _conditional pmf rv independence:
+
+Independence
+~~~~~~~~~~~~
+
+Two random variables :math:`X` and :math:`Y` are independent if:
+
+.. math::
+
+   p_{X,Y}(x,y) = p_X(x)p_Y(y)
+
+.. note::
+
+   This is similar to basic probability's independence. (Refer to
+   :ref:`independence`.)
+
+   Some properties:
+
+   - :math:`\mathbb{E}[XY] = \mathbb{E}[X] \mathbb{E}[Y]`
+   - :math:`\text{var}(X+Y) = \text{var}(X) + \text{var}(Y)`
