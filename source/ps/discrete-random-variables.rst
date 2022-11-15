@@ -255,6 +255,9 @@ From that, we also have the expected value rule:
 
 .. _total expectation theorem:
 
+Total Expectation Theorem
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 (Refer to :ref:`total probability theorem` first.)
 
 If :math:`A_1, \ldots , A_n` be *disjoint events* that form a partition of the
