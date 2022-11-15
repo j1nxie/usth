@@ -215,3 +215,169 @@ For multiplication rule:
 .. math::
 
    P(A \cap B) = P(B)P(A|B) = P(A)P(B|A)
+
+.. _total probability theorem:
+
+Total Probability Theorem
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Given a sample space :math:`\Omega`, partitioned into three sections:
+:math:`A_1`, :math:`A_2`, :math:`A_3`. For every :math:`i`, we have
+:math:`P(A_i)` and :math:`P(B|A_i)`.
+
+.. figure:: ../_static/total-prob-theorem.png
+   :width: 300
+   :align: center
+
+   Sample space with three partitions
+
+From that, we can calculate :math:`P(B)` by:
+
+.. math::
+
+   P(B) = \sum_i P(A_i)P(B|A_i)
+
+.. _bayes rule:
+
+Bayes' Rule
+~~~~~~~~~~~
+
+Given the same sample space as above, we can calculate :math:`P(A_i|B)` using
+the below formula:
+
+.. math::
+   
+   P(A_i|B) = \frac{\text{multiplication rule}}{\text{total probability
+   theorem}}
+
+We also have Bayes' rule's definition:
+
+.. math::
+
+   P(A_i|B) = \frac{P(A_i)P(B|A_i)}{\sum_j P(A_j)P(B|A_j)}
+
+.. _bayesian inference:
+
+Bayesian Inference
+~~~~~~~~~~~~~~~~~~
+
+Initial beliefs :math:`P(A_i)` on possible causes of an observed event
+:math:`B`.
+
+Model of the world under each :math:`A_i` is given:
+
+.. math::
+
+   A_i \rightarrow^{\text{model}}_{P(B|A_i)} B
+
+Then, we can draw inference about causes:
+
+.. math::
+
+   B \rightarrow^{\text{inference}}_{P(A_i|B)} A_i
+
+.. _independence:
+
+Independence
+------------
+
+An intuitive explanation of independence would be: The probability of rolling a
+fair die and getting a 6 while it is raining, because the result of rolling a
+die wouldn't be affected by the weather.
+
+An intuitive mathematical definition would be similar to the one below:
+
+.. math::
+
+   P(B|A) = P(B)
+
+The formal definition of independence is:
+
+.. math::
+   
+   P(A \cup B) = P(A)P(B)
+
+.. _conditional independence:
+
+Conditional Independence
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Given a sample space :math:`\Omega`, with two events :math:`A`, :math:`B`,
+knowing that event :math:`C` happens.
+
+.. figure:: ../_static/conditional-independence.png
+   :width: 300
+   :align: center
+
+   Sample space for conditional independence
+
+We have the definition for conditional independence, given :math:`C`:
+
+.. math::
+
+   P(A \cup B | C) = P(A|C)P(B|C)
+
+.. _counting:
+
+Counting
+--------
+
+.. _counting principle:
+
+Counting Principle
+~~~~~~~~~~~~~~~~~~
+
+Consider a sequence of :math:`r` stages, each stage having a number of options
+:math:`n_i`. Then, the number of possible choices is:
+
+.. math::
+
+   n_1n_2 \ldots n_r
+
+.. _permutations and subsets:
+
+Permutations and Subsets
+########################
+
+Permutations are the number of ways you can order :math:`n` elements.
+
+.. math::
+
+   n!
+
+Subsets are smaller sets that are part of the original set. For example, the
+number of subsets of :math:`\{1, 2, \ldots , n\}` would be :math:`2^n`.
+
+.. _discrete uniform law:
+
+Discrete Uniform Law
+~~~~~~~~~~~~~~~~~~~~
+
+Given a sample space :math:`\Omega` consisting of :math:`n` equally likely
+elements, and an event :math:`A` consisting of :math:`k` elements.
+
+.. figure:: ../_static/discrete-uniform-law.png
+   :width: 300
+   :align: center
+
+   Sample space for discrete uniform law
+
+Then, we have the probability of event :math:`A` as:
+
+.. math::
+
+   P(A) = \frac{\text{number of elements of} \ A}{\text{number of elements of} \
+   B} = \frac{k}{n}
+
+.. _combinations:
+
+Combinations
+~~~~~~~~~~~~
+
+Given a set of :math:`n` elements, if we want to construct a subset with exactly
+:math:`k` elements, we can calculate the number of ways using the below formula:
+
+.. math::
+
+   C^n_k = \begin{pmatrix} k \\ n \end{pmatrix} = \frac{n(n-1) \ldots
+   (n-k+1)}{k(k-1) \ldots 1} = \frac{n!}{k!(n-k)!}
