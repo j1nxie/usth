@@ -251,8 +251,8 @@ Consider the following random variable :math:`X`:
 
    X = \begin{cases}
    \begin{aligned}
-   \text{uniform on} \ [0, 2] \quad & \text{w.p.} \frac{1}{2} \\
-   1 \quad & \text{w.p.} \frac{1}{2}
+   \text{uniform on} \ [0, 2] \quad & \text{w.p.} \ \frac{1}{2} \\
+   1 \quad & \text{w.p.} \ \frac{1}{2}
    \end{aligned}
    \end{cases}
 
