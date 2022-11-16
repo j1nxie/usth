@@ -7,3 +7,4 @@ Probability and Statistics
 
    basic-probability
    discrete-random-variables
+   continuous-random-variables
