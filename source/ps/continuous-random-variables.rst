@@ -204,7 +204,7 @@ is defined by:
 Conditional Expectations on an Event
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(Refer to :ref:`conditional pdf expectations`.)
+(Refer to :ref:`conditional pmf expectations`.)
 
 The conditional expectation of :math:`X` given an event :math:`A` with
 :math:`P(A) > 0` is defined by:
