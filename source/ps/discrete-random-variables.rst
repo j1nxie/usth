@@ -6,7 +6,8 @@ Discrete Random Variables
 Discrete Random Variables
 -------------------------
 
-The formal definition of discrete random variables is as follows:
+The formal definition of discrete random variables is as follows, where
+:math:`x` is some exact value.
 
 .. math::
 
