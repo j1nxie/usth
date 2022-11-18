@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>1. Introduction to Algorithms and Data Structures &#8212; USTH Study Notes Emporium</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script>window.MathJax = {"tex": {"packages": ["base", "ams"]}, "loader": {"load": ["output/svg", "[tex]/ams"]}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="prev" title="USTH Study Notes Emporium" href="../../" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="introduction-to-algorithms-and-data-structures">
+<h1><span class="section-number">1. </span>Introduction to Algorithms and Data Structures<a class="headerlink" href="#introduction-to-algorithms-and-data-structures" title="Permalink to this heading">¶</a></h1>
+<section id="computer-program">
+<span id="program"></span><h2><span class="section-number">1.1. </span>Computer program<a class="headerlink" href="#computer-program" title="Permalink to this heading">¶</a></h2>
+<p>A computer program is a <strong>collection of instructions</strong> a computer can execute to
+perform a task.</p>
+</section>
+<section id="data-structure">
+<span id="id1"></span><h2><span class="section-number">1.2. </span>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this heading">¶</a></h2>
+<p>A data structure is a data organization, management and storage format that
+enables efficient access and computation.</p>
+</section>
+<section id="flowcharts">
+<span id="flowchart"></span><h2><span class="section-number">1.3. </span>Flowcharts<a class="headerlink" href="#flowcharts" title="Permalink to this heading">¶</a></h2>
+<p>Flowcharts are used in designing and documenting simple processes or programs
+(see <a class="reference internal" href="#program"><span class="std std-ref">Computer program</span></a>). They help with visualizing and understanding a process. A
+table of common symbols used in flowcharts can be seen <a class="reference external" href="https://en.wikipedia.org/wiki/Flowchart#Common_symbols">here</a>.</p>
+</section>
+<section id="pseudocode">
+<span id="id2"></span><h2><span class="section-number">1.4. </span>Pseudocode<a class="headerlink" href="#pseudocode" title="Permalink to this heading">¶</a></h2>
+<p>Pseudocode is a high-level description of an algorithm (see <a class="reference internal" href="#algorithm"><span class="std std-ref">Algorithm</span></a>). It is usually concrete
+and easy for human comprehension. An example of pseudocode would be:</p>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-number">Listing 1.1 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">findMax(a)</span></code></span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="n">n</span> <span class="n">do</span>
+<span class="linenos">2</span>   <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">Max</span> <span class="n">then</span>
+<span class="linenos">3</span>      <span class="n">Max</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="linenos">4</span>   <span class="n">end</span> <span class="k">if</span>
+<span class="linenos">5</span><span class="n">end</span> <span class="k">for</span>
+<span class="linenos">6</span><span class="k">return</span> <span class="n">Max</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="algorithm">
+<span id="id3"></span><h2><span class="section-number">1.5. </span>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this heading">¶</a></h2>
+<p>An algorithm is a finite sequence of well-defined instructions to <strong>solve a
+specific problem or to perform a computation</strong>.</p>
+<section id="properties">
+<span id="id4"></span><h3><span class="section-number">1.5.1. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h3>
+<p>Good algorithms must possess these following properties.</p>
+<section id="finiteness">
+<span id="id5"></span><h4><span class="section-number">1.5.1.1. </span>Finiteness<a class="headerlink" href="#finiteness" title="Permalink to this heading">¶</a></h4>
+<p>Finiteness of an algorithm means it must always terminate after a <em>finite</em>
+number of steps. The <em>stopping conditions</em> of the algorithm should be assessed.</p>
+</section>
+<section id="definiteness">
+<span id="id6"></span><h4><span class="section-number">1.5.1.2. </span>Definiteness<a class="headerlink" href="#definiteness" title="Permalink to this heading">¶</a></h4>
+<p>Each instruction of an algorithm should be defined precisely and concisely.
+<em>Repetition</em> should be avoided at all costs.</p>
+</section>
+<section id="input-output">
+<span id="id7"></span><h4><span class="section-number">1.5.1.3. </span>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this heading">¶</a></h4>
+<p>An algorithms may <em>not</em> have <strong>inputs</strong>, but it will have <em>one or more</em>
+<strong>outputs</strong> available when the algorithm terminates.</p>
+</section>
+<section id="effectiveness">
+<span id="id8"></span><h4><span class="section-number">1.5.1.4. </span>Effectiveness<a class="headerlink" href="#effectiveness" title="Permalink to this heading">¶</a></h4>
+<p>All operations in an algorithm must be <em>sufficiently basic</em> that they can be
+done exactly as given and in <em>finite</em> time.</p>
+</section>
+</section>
+<section id="evaluation-criterias">
+<span id="criterias"></span><h3><span class="section-number">1.5.2. </span>Evaluation criterias<a class="headerlink" href="#evaluation-criterias" title="Permalink to this heading">¶</a></h3>
+<p>There are a few criterias often used to evaluate an algorithm.</p>
+<section id="correctness">
+<span id="id9"></span><h4><span class="section-number">1.5.2.1. </span>Correctness<a class="headerlink" href="#correctness" title="Permalink to this heading">¶</a></h4>
+<p>Correctness evaluates whether an algorithm always produces the expected results
+for each given input.</p>
+</section>
+<section id="efficiency-complexity">
+<span id="complexity"></span><h4><span class="section-number">1.5.2.2. </span>Efficiency/Complexity<a class="headerlink" href="#efficiency-complexity" title="Permalink to this heading">¶</a></h4>
+<p>An algorithm should be optimized to have the lowest running time possible, also
+known as having the lowest <em>time complexity</em>. During implementation of the
+algorithm, as variables are declared and located in memory, an algorithm should
+also be optimized to have the lowest allocated memory possible, also known as
+having the lowest <em>space complexity</em>.</p>
+</section>
+</section>
+<section id="categories">
+<span id="id10"></span><h3><span class="section-number">1.5.3. </span>Categories<a class="headerlink" href="#categories" title="Permalink to this heading">¶</a></h3>
+<p>Algorithms can be divided into a few categories, depending on the method used to
+solve a certain problem.</p>
+<section id="recursive">
+<span id="id11"></span><h4><span class="section-number">1.5.3.1. </span>Recursive<a class="headerlink" href="#recursive" title="Permalink to this heading">¶</a></h4>
+<p>A simple recursive algorithm converts the main problem into smaller
+sub-problems, with certain base cases. It will solve the base cases directly,
+and it will recur (hence, “recursive”) with a simpler sub-problem.</p>
+<p>The sub-problems may overlap. As a recursive algorithm will solve all
+sub-problems until they reach the base case, sub-problems may be solved more
+than once.</p>
+</section>
+<section id="divide-and-conquer">
+<span id="id12"></span><h4><span class="section-number">1.5.3.2. </span>Divide and Conquer<a class="headerlink" href="#divide-and-conquer" title="Permalink to this heading">¶</a></h4>
+<p>Divide and conquer algorithms are an extension of the simple recursive
+algorithms (see <a class="reference internal" href="#recursive"><span class="std std-ref">Recursive</span></a>). Given a problem to be solved, these
+algorithms will split it into several smaller problems. Afterwards, it will
+solve each problem recursively, and combine all the sub-solutions to produce a
+solution for the original problem.</p>
+<p>Traditionally, an algorithm is considered a “divide and conquer” algorithm if it
+contains at least two recursive calls.</p>
+<p>Some examples of divide and conquer algorithms would be <a class="reference external" href="https://simple.wikipedia.org/wiki/Quicksort">quicksort</a> and
+<a class="reference external" href="https://simple.wikipedia.org/wiki/Merge_sort">merge sort</a>.</p>
+</section>
+<section id="dynamic-programming">
+<span id="id13"></span><h4><span class="section-number">1.5.3.3. </span>Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permalink to this heading">¶</a></h4>
+<p>A dynamic programming algorithm remembers past results and uses them to find new
+results. The algorithm will cut the problem into a set of simpler sub-problems.
+Afterwards, it will solve each sub-problem <em>once</em>, and store their solutions,
+which can be used in later stages.</p>
+<p>The biggest difference between dynamic programming and divide and conquer (see
+<a class="reference internal" href="#divide-and-conquer"><span class="std std-ref">Divide and Conquer</span></a>) is that sub-problems generally don’t need to overlap.</p>
+<p>An example of dynamic programming would be this implementation in finding the
+<span class="math notranslate nohighlight">\(n^{th}\)</span> number in the Fibonacci sequence:</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-number">Listing 1.2 </span><span class="caption-text"><cite>Fibonacci</cite></span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">int</span><span class="w"> </span><span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../">USNE</a></h1>
+
+
+
+<p class="blurb">An attempt to simplify the lectures taught at USTH.</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction to Algorithms and Data Structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#computer-program">1.1. Computer program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-structure">1.2. Data structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flowcharts">1.3. Flowcharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pseudocode">1.4. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algorithm">1.5. Algorithm</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../">Documentation overview</a><ul>
+      <li>Previous: <a href="../../" title="previous chapter">USTH Study Notes Emporium</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, j1nxie.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/ads/introduction.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
